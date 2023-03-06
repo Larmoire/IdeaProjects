@@ -34,7 +34,7 @@ class TestUmlPersonne {
     @Test
     fun `methodes`() {
         assertAll(
-            { uml.methodCheck("donneNomComplet") },
+            { uml.methodCheck("donneNomComplet", "kotlin.String") },
         )
     }
 

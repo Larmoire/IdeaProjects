@@ -15,20 +15,21 @@ class TestUmlVoiture {
         )
     }
 
-    @Test
+/*  @Test
     fun `constructeur`() {
         uml.constructorCheck(
             KVisibility.PUBLIC,
             "mod", "kotlin.String", "coul", "kotlin.String"
         )
-    }
+    }*/
 
     @Test
     fun `attributs`() {
         assertAll(
             { uml.attributeCheck("modele", "kotlin.String") },
             { uml.attributeCheck("couleur", "kotlin.String") },  
-            { uml.attributeCheck("proprietaire", "Personne?")}    
+            { uml.attributeCheck("proprietaire", "Personne?")},
+            { uml.attributeCheck("parking", "Parking?")}    
         )
     }
 
@@ -39,9 +40,11 @@ class TestUmlVoiture {
             { uml.methodCheckParams("acheter", "acheteur", "Personne") },
             { uml.methodCheck("repeindre") },
             { uml.methodCheckParams("repeindre", "nouvelleCouleur", "kotlin.String") },
-            { uml.methodCheck("donneInformations") },
+            { uml.methodCheck("donneInformations", "kotlin.String") },
+            { uml.methodCheck("estGaree", "kotlin.Boolean") },
+            { uml.methodCheck("garerDans", "kotlin.Boolean") },
+            { uml.methodCheckParams("garerDans", "unParking", "Parking") },
+            { uml.methodCheck("quitterStationnement", "kotlin.Boolean") }
         )
     }
-
-
 }

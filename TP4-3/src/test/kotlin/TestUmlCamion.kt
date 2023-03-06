@@ -34,11 +34,11 @@ class TestUmlCamion {
     @Test
     fun `methodes`() {
         assertAll(
-            { uml.methodCheck("estPlein") },
-            { uml.methodCheck("estVide") },
-            { uml.methodCheck("charger") },
+            { uml.methodCheck("estPlein", "kotlin.Boolean") },
+            { uml.methodCheck("estVide", "kotlin.Boolean") },
+            { uml.methodCheck("charger", "kotlin.Boolean") },
             { uml.methodCheckParams("charger", "voitureTransportee", "Voiture") },
-            { uml.methodCheck("decharger") },
+            { uml.methodCheck("decharger", "Voiture?") },
         )
     }
 
