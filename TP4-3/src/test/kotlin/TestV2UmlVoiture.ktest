@@ -1,0 +1,49 @@
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertAll
+import kotlin.reflect.KVisibility
+
+class TestV2UmlVoiture {
+
+    val uml = UMLChecker(Voiture::class)
+
+    @Test
+    fun `constructeur`() {
+        uml.constructorCheck(
+            KVisibility.PUBLIC,
+            "mod", "kotlin.String", "coul", "kotlin.String", "vitMax", "kotlin.Double"
+        )
+    }
+
+    @Test
+    fun `attributs`() {
+        assertAll(
+            { uml.attributeCheck("modele", "kotlin.String") },
+            { uml.attributeCheck("couleur", "kotlin.String") },  
+            { uml.attributeCheck("proprietaire", "Personne?")},
+            { uml.attributeCheck("vitesseCourante", "kotlin.Double")},   
+            { uml.attributeCheck("vitesseMaximum", "kotlin.Double")}  , 
+           { uml.attributeCheck("enMarche", "kotlin.Boolean")}   ,
+
+        )
+    }
+
+    @Test
+    fun `methodes`() {
+        assertAll(
+            { uml.methodCheck("acheter") },
+            { uml.methodCheckParams("acheter", "acheteur", "Personne") },
+            { uml.methodCheck("repeindre") },
+            { uml.methodCheckParams("repeindre", "nouvelleCouleur", "kotlin.String") },
+            { uml.methodCheck("donneInformations") },
+            { uml.methodCheck("demarrer") },
+            { uml.methodCheck("arreter") },
+            { uml.methodCheck("estEnMarche") },
+            { uml.methodCheck("accelerer") },
+            { uml.methodCheckParams("accelerer", "acceleration", "kotlin.Double") },
+            { uml.methodCheck("decelerer") },
+            { uml.methodCheckParams("decelerer", "deceleration", "kotlin.Double") },
+        )
+    }
+
+
+}

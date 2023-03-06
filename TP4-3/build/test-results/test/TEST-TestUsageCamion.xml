@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestUsageCamion" tests="12" skipped="0" failures="0" errors="0" timestamp="2023-03-03T08:13:52" hostname="U-INF-J-E114-27" time="0.019">
+  <properties/>
+  <testcase name="chargement3voitures_dechargement3_rechargement1_dechargement1()" classname="TestUsageCamion" time="0.01"/>
+  <testcase name="chargement1voiture2fois()" classname="TestUsageCamion" time="0.001"/>
+  <testcase name="chargement3voitures_dechargement1()" classname="TestUsageCamion" time="0.001"/>
+  <testcase name="chargement3voitures_dechargement3()" classname="TestUsageCamion" time="0.001"/>
+  <testcase name="chargement3voitures_dechargement4()" classname="TestUsageCamion" time="0.001"/>
+  <testcase name="chargement2voitures_1_2fois1()" classname="TestUsageCamion" time="0.0"/>
+  <testcase name="chargement2voitures_1_2fois2()" classname="TestUsageCamion" time="0.0"/>
+  <testcase name="chargement3voitures()" classname="TestUsageCamion" time="0.0"/>
+  <testcase name="chargement3voitures_dechargement3_rechargement1()" classname="TestUsageCamion" time="0.001"/>
+  <testcase name="camionInit()" classname="TestUsageCamion" time="0.0"/>
+  <testcase name="chargement2voitures()" classname="TestUsageCamion" time="0.0"/>
+  <testcase name="chargement1voiture()" classname="TestUsageCamion" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
